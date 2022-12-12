@@ -20,3 +20,4 @@ select player.*
 from player
     left join events
     on player.player_id = events.player_id
+

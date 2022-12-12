@@ -1,23 +1,20 @@
 with player as (
     select * from {{ ref('dim_players') }}
 ),
-{% for fact in ["goal","miss","card","pass"] %}
-{{fact}} as (
+events as (
     select
         player_id
-        , count(event_type_name) as fact
-    from {{ ref('fct_events') }}
-    where event_type_name = '{{fact}}'
-    group by player_id
-){% if not loop.last %},{% endif %}
-{% endfor %}
+        {% for fact in ['goal', 'miss', 'card', 'pass'] %}
+        , sum ( case when event_type_name = '{{fact}}' then 1 else 0 end) as {{fact}}
+        {% endfor %}
+     from {{ ref('fct_events') }}
+     group by player_id
+)
 
 select player.*
-    {% for fact in ["goal","miss","card","pass"] %}
-        , {{fact}}.fact as {{fact}}
+    {% for fact in ['goal', 'miss', 'card', 'pass'] %}
+        , events.{{fact}}
     {% endfor %}
 from player
-    {% for fact in ["goal","miss","card","pass"] %}
-        left join {{fact}}
-    on player.player_id = {{fact}}.player_id
-    {% endfor %}
+    left join events
+    on player.player_id = events.player_id
