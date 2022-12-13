@@ -8,8 +8,6 @@ with dim_players as (
 ) 
 ,final as (
 
-    {% set event_types= ['goal','miss','card','pass'] %}
-
     select 
         dim_players.player_id
         , player_name
