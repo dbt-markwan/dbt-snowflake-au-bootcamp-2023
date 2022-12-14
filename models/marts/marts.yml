@@ -9,7 +9,9 @@ models:
         - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
-
+      - name: event_pk
+        tests:
+        - not_null
 models:
   - name: dim_players
     description: "Single source of truth for player information. Enhanced with team data."
