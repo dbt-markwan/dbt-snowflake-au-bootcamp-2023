@@ -1,8 +1,13 @@
 version: 2
 
 models:
+  - name: dim_players
+    description: "Player details"
   - name: fct_events
     columns:
+      - name: player_id
+        tests:
+        - not_null
       - name: event_pk
         tests:
         - not_null
