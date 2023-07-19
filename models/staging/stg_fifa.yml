@@ -1,8 +1,6 @@
 version: 2
 
 models:
-  - name: event
-
   - name: stg_event_type
     description: ""
     columns:
@@ -10,20 +8,6 @@ models:
         tests:
           - unique
           - not_null
-  
-  - name: stg_player
-    description: ""
-    columns:
-      - name: player_id
-        tests:
-          - unique
-          - not_null
-
-      - name: weight
-        description: "in KGs"
-
-      - name: height
-        description: "in CMs"
 
   - name: stg_team
     description: ""
