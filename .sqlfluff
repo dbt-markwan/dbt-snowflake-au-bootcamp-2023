@@ -20,7 +20,7 @@ indented_then_contents = False
 
 [sqlfluff:layout:type:comma]
 spacing_before = touch
-line_position = leading
+line_position = trailing
 
 [sqlfluff:rules:capitalisation.keywords] 
 capitalisation_policy = lower
