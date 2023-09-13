@@ -1,8 +1,8 @@
 with stg_event as (
-    select * from {{ ref('stg_event') }}
+    select * from {{ ref('stg_fifa__event') }}
 )
 , stg_event_type as (
-    select * from {{ ref('stg_event_type') }}
+    select * from {{ ref('stg_fifa__event_type') }}
 )
 , final as (
     select 
