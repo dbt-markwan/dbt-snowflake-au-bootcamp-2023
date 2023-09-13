@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: fifa
-    database: OPTA_DATA_FIFA_MENS_WORLD_CUP__SAMPLE
+    database: Opta_Data_FIFA_Mens_World_Cup__SAMPLE
     schema: world_cup
     quoting:
       database: true
