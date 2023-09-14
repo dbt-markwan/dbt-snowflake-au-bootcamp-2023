@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_event_type
+  - name: stg_fifa__event_type
     description: "It's all about Event information"
     columns:
       - name: event_type_id
@@ -9,7 +9,7 @@ models:
           - unique
           - not_null
 
-  - name: stg_team
+  - name: stg_fifa__team
     description: "It's all about team information"
     columns:
       - name: team_id
