@@ -20,10 +20,10 @@ indented_then_contents = False
 
 [sqlfluff:layout:type:comma]
 spacing_before = touch
-line_position = trailing
+line_position = leading
 
 [sqlfluff:rules:capitalisation.keywords] 
-capitalisation_policy = lower
+capitalisation_policy = upper
 
 [sqlfluff:rules:aliasing.table]
 aliasing = explicit
