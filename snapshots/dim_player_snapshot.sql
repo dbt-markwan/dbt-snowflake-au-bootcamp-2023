@@ -1,10 +1,10 @@
-{% snapshot dim_players_snapshot %}
+{% snapshot dim_player_snapshot %}
     {{
         config(
             unique_key='player_id',
             strategy='check',
             check_cols = ['city', 'team_name', 'country_code'],
-            target_schema = 'mwan_snapshots'
+            target_schema = 'markwan_snapshots'
         )
     }}
 
