@@ -15,4 +15,10 @@ models:
       - name: team_id
         tests:
           - unique
+  - name: stg_fifa__player
+    description: ""
+    columns:
+      - name: player_id
+        tests:
+          - unique
           - not_null

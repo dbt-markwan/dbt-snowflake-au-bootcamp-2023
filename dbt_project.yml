@@ -35,4 +35,5 @@ models:
   fifa:
     # Applies to all files under models/staging/
     staging:
-      materialized: view
+      materialized: view      
+      # +schema: staging
