@@ -16,3 +16,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_fifa__player
+    description: "Staging table with player information like Name, height and weight."
+    columns:
+      - name: player_id
+        description: "Primary key of stg_player"
+        tests:
+          - unique
+          - not_null
