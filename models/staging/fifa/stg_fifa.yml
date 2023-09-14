@@ -20,7 +20,7 @@ models:
   - name: stg_fifa__player
     description: "It's all about Player information"
     columns:
-      - name: player_id 
+      - name: player_id
         description: "It's all about PlayerID"
         tests:
           - unique
