@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_event_type
-    description: ""
+    description: "It's all about Event information"
     columns:
       - name: event_type_id
         tests:
@@ -10,9 +10,18 @@ models:
           - not_null
 
   - name: stg_team
-    description: ""
+    description: "It's all about team information"
     columns:
       - name: team_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_fifa__player
+    description: "It's all about Player information"
+    columns:
+      - name: player_id 
+        description: "It's all about PlayerID"
         tests:
           - unique
           - not_null
