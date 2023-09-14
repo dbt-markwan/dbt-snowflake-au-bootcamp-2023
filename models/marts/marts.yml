@@ -9,3 +9,10 @@ models:
         - unique
       - name: event_type_name
         description: "this indicates various events on the field tracked by our cameras and AI models"
+
+  - name: dim_players
+    description: "single source of truth for player information with enhanced team data"
+    columns:
+      - name: player_id
+      - name: team_name
+        description: "team name is taken from stg_team model and joined on affiliation_id"

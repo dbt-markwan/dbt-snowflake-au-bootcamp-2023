@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_event_type
-    description: ""
+    description: "event types"
     columns:
       - name: event_type_id
         tests:
@@ -10,9 +10,22 @@ models:
           - not_null
 
   - name: stg_team
-    description: ""
+    description: "staging event table"
     columns:
       - name: team_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_player
+    description: "staging player table"
+    columns:
+      - name: team_id
+        tests:
+          - unique
+          - not_null
+      - name: player_id
+        description: "player id information"
         tests:
           - unique
           - not_null
