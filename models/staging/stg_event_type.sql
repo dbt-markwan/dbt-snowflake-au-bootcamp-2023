@@ -6,3 +6,4 @@ select
     id as event_type_id
     , replace(lower(name),' ','_') as event_type_name
 from event_type
+select
